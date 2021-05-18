@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AcademicEHR.Views.ComprehensiveAssessmentForm" Title="Comprehensive Assessment Form">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Comprehensive Assessment Form" FontSize="30" FontAttributes="Bold"/>
+
+            <ListView ItemSelected="ListView_ItemSelected">
+              <ListView.ItemsSource>
+                  <x:Array Type="{x:Type x:String}">
+                    <x:String>General Survey</x:String>
+                    <x:String>Vital Signs</x:String>
+                    <x:String>Neuro</x:String>
+                    <x:String>Resp</x:String>
+                    <x:String>Cardiac</x:String>
+                    <x:String>PV</x:String>
+                    <x:String>GI</x:String>
+                    <x:String>GU</x:String>
+                    <x:String>MS</x:String>
+                    <x:String>Skin</x:String>
+                    <x:String>HEENT</x:String>
+                  </x:Array>
+              </ListView.ItemsSource>
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding .}" FontSize="30"/>
+                    </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>        
+    
+    </ContentPage.Content>
+</ContentPage>

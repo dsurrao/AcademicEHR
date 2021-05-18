@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AcademicEHR.Views.FocusedAssessment">
+    <ContentPage.Content>
+        <TableView Intent="Settings" Margin="20">
+            <TableRoot>
+                <TableSection Title="Focused Assessment Findings">
+                    <ViewCell>
+                      <Editor Text=""/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Patient Initials">
+                    <ViewCell>
+                      <Entry/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Student Name">
+                    <ViewCell>
+                      <Entry/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Student Email">
+                    <ViewCell>
+                      <Entry/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                      <Button Text="Save"
+                              Clicked="Button_Clicked"  Style="{StaticResource buttonStyle}" />
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

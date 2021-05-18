@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AcademicEHR.Views.InitialAssessmentTool"
+             Title="Initial Assessment Tool">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+               <TableView Intent="Settings">
+                  <TableRoot>
+                      <TableSection Title="Getting Started">
+                          <ViewCell>
+                              <StackLayout Orientation="Horizontal">
+                                  <Image Source="bulb.png" />
+                                  <Label Text="left"
+                                         TextColor="#f35e20" />
+                                  <Label Text="right"
+                                         HorizontalOptions="EndAndExpand"
+                                         TextColor="#503026" />
+                              </StackLayout>
+                          </ViewCell>
+                      </TableSection>
+                  </TableRoot>
+              </TableView>
+
+
+                <Label Text="Initial Assessment Tool" FontSize="Title"/>
+                <Label Text="Wash your hands, apply appropriate PPE, scan the room for safety introduce yourself to your patient, and use two identifiers to correctly identify your patient ( check wristband and MR# to the EHR and ask the patient to state name and date of birth). Position your EHR at waist height, perpendicular to the client so that you can reference it in your workflow."  Style="{StaticResource critical}"/>
+                <Label Text="Report abnormal findings to your clinical instructor immediately" Style="{StaticResource critical}"/>
+
+                <Label Text="Airway" FontSize="Subtitle"/>
+                <Label Text="Is the patient able to speech in full sentences, exhibits no abnormal audible airway noise (barking, snoring or stridor) and is maintaining an effective airway? Are aspiration precautions in use, if appropriate ( NGT/PEG tube, impaired consciousness, ET/Trach Tube, Dysphagia, STROKE)?" Style="{StaticResource normal}"/>
+                <Picker x:Name="airwayPicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="If the patient does not have an airway, activate the Rapid Response Team and initiate BLS Algorithm to manage the airway. Otherwise, perform a focused assessment and notify your instructor. Implement immediate nursing interventions to ensure adequate airway. HOB > 30-45 degrees, perform pulmonary hygiene, suctioning as indicated to clear airway. Activate RRT according to protocol." x:Name="airwayNo" Style="{StaticResource critical}"/>
+
+                <Label Text="Sounds like you are not sure what to do with your findings. It is a good idea to get assistance from a peer, faculty or nurse mentor to discuss your concerns. Notify your faculty and team while you continue with the initial assessment as your wait for their response." x:Name="airwayUnsure" Style="{StaticResource abnormal}"/>
+
+                <Label Text="Breathing" FontSize="Subtitle"/>
+                <Label Text="Your next priority is to assess their breathing to ensure that they have adequate gas exchange. Their skin color should be within normal limits, breathing unlabored, without any change in mental status, and there is no respiratory distress." Style="{StaticResource normal}"/>
+
+                <Label Text="Assess the patient's breathing" Style="{StaticResource normal}"/>
+                <Label Text="Are the patient ‘s respirations without distress, between 10-30, with no evidence of abnormal chest wall movement, skin acyanotic and sensorium intact? If oxygen is ordered, is it at the correct rate?" Style="{StaticResource normal}"/>
+                <Picker x:Name="breathingPicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="If the patient’s respiratory rate &lt; 10 or greater than 30, the patient's pulse oximetry is below benchmark and does not improve with supplemental oxygen titration, activate the Rapid Response Team and initiate emergency oxygen utilization measures as per agency protocol. ACLS algorithm Perform a focused assessment, notify your instructor and implement immediate nursing interventions to ensure adequate effective gas exchange: elevate the head of bed according to tolerance and blood pressure and apply oxygen according to protocol to maintain pulse oximetry > 92-94% or as ordered. Activate RRT as indicated" x:Name="breathingNo" Style="{StaticResource critical}"/>
+
+                <Label Text="Sounds like you are not sure what to do with your findings. It is a good idea to get assistance from a peer, faculty or nurse mentor to discuss your concerns. Notify your faculty and team while you continue with the initial assessment as your wait for their response." x:Name="breathingUnsure" Style="{StaticResource abnormal}"/>
+
+                <Label Text="Circulation" FontSize="Subtitle"/>
+                <Label Text="Assess the patient's breathing" Style="{StaticResource normal}"/>
+                <Label Text="Is the patient without chest pain, nausea/vomiting associated with difficulty breathing, diaphoresis and/or activity intolerance? Heart rate,rhythm and blood pressure within normal limits. No evidence of bleeding. Sequential TEDS are in use and there is no alteration in peripheral circulation( unexpected pallor, rubor, mottling or edema)?" Style="{StaticResource normal}"/>
+                <Picker x:Name="ciculationPicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="If the patient has signs of acute coronary syndrome, pulmonary edema, DVT/PE or acute limb ischemia or shock, initiate pulse oximetry, cardiac monitoring frequent vital signs q 5-15 minute, s activate the Rapid Response Team and obtain a stat 12 lead EKG Perform a focused assessment, notify your instructor and implement immediate nursing interventions to ensure adequate effective tissue perfusion and cardiac output: elevate the head of bed according to tolerance and blood pressure and apply oxygen according to protocol to maintain pulse oximetry > 92-94% or as ordered, ensure adequate IV access. Activate RRT as indicated" x:Name="circulationNo" Style="{StaticResource critical}"/>
+
+                <Label Text="Sounds like you are not sure what to do with your findings. It is a good idea to get assistance from a peer, faculty or nurse mentor to discuss your concerns. Notify your faculty and team while you continue with the initial assessment as your wait for their response." x:Name="circulationUnsure" Style="{StaticResource abnormal}"/>
+
+                <Label Text="Disability" FontSize="Subtitle"/>
+                <Label Text="Your next priority is to assess for acute stroke signs, using the FAST assessment or BEFAST according to your agency protocol. Be mindful of new onset numbness/tinging, motor/sensory disturbance, change in balance or blurred vision" Style="{StaticResource normal}"/>
+
+                <Label Text="Assess for stroke signs" Style="{StaticResource normal}"/>
+                <Label Text="No change in FAST assessment, behavior, level of consciousness, balance, motor sensory or balance?" Style="{StaticResource normal}"/>
+                <Picker x:Name="strokePicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="If the patient is experiencing Stoke signs Implement immediate nursing interventions to ensure adequate tissue perfusion. If impaired consciousness is present, position the client in recovery position to protect the airway and prevent aspiration. In all patients, consider elevating the head of bed 30 degrees according to tolerance and obtain vital signs and perform a focused assessment, notify your instructor . Apply oxygen according to protocol to maintain pulse oximetry > 92-94% or as ordered. Activate RRT as indicated" x:Name="strokeNo" Style="{StaticResource critical}"/>
+
+                <Label Text="Sounds like you are not sure what to do with your findings. It is a good idea to get assistance from a peer, faculty or nurse mentor to discuss your concerns. Notify your faculty and team while you continue with the initial assessment as your wait for their response." x:Name="strokeUnsure" Style="{StaticResource abnormal}"/>
+
+                <Label Text="Environment" FontSize="Subtitle"/>
+                <Label Text="Assess the environment" Style="{StaticResource normal}"/>
+                <Label Text="Confirm that client’s understanding of appropriate precautions in use; transmissible vs. protective isolation based on the patient’s current status. If dedicated equipment is required, is it clean and available? Is the room clean and free from environmental hazards (physical/electrical)? If restraints are in use, is the protocol in place and risk for injury mitigated?" Style="{StaticResource normal}"/>
+                <Picker x:Name="environmentPicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Fahrenheit" FontSize="Subtitle"/>
+                <Label Text="Check if a sepsis screen is due and coordinate with this check. Perform a sepsis screen if the client reports chills or fever." Style="{StaticResource normal}"/>
+
+                <Label Text="Assess Fahrenheit" Style="{StaticResource normal}"/>
+                <Label Text="Does the patient deny complaints of chills or fever? Sepsis signs are absent in presence of possible infection( ANY 2 signs: RR> 22, SBP &lt; 100 mm Hg, Altered mental status)" Style="{StaticResource normal}"/>
+                <Picker x:Name="fahrenheitPicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="If the client reports chills or fever or sepsis signs are present in a new or worsening infection, notify your instructor/mentor immediately and prepare to initiate a code sepsis." x:Name="fahrenheitNo" Style="{StaticResource critical}"/>
+                <Label Text="Sounds like you are not sure what to do with your findings. It is a good idea to get assistance from a peer, faculty or nurse mentor to discuss your concerns. Notify your faculty and team while you continue with the initial assessment as your wait for their response." x:Name="fahrenheitUnsure" Style="{StaticResource abnormal}"/>
+
+                <Label Text="Glucose" FontSize="Subtitle"/>
+                <Label Text="Check that capillary blood glucose measurements (CBG) that were ordered have been done and there are no signs of hypo/hyperglycemia" Style="{StaticResource normal}"/>
+                <Label Text="Glucose Management" Style="{StaticResource normal}"/>
+                <Label Text="GLUCOSE: In patients with Diabetes Mellitus: Is the client euglycemic,- signs of hyperglycemia (polyuria, polydipsa, polyphagia) or hypoglycemia (agitation, tremor, diaphoresis) absent? Was the capillary blood glucose completed according to orders?" Style="{StaticResource normal}"/>
+                <Picker x:Name="glucosePicker">
+                    <Picker.Items>
+                        <x:String>Yes</x:String>
+                        <x:String>No</x:String>
+                        <x:String>Unsure</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Documentation" FontSize="Subtitle"/>
+                <Label Text="Please complete your information and select to download pdf to forward to your clinical faculty/preceptor." Style="{StaticResource normal}"/>
+
+                <Entry Placeholder="Your name"/>
+                <Entry Placeholder="Your email"/>
+
+                <Button Text="Submit"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
